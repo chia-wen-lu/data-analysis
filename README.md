@@ -39,17 +39,23 @@ will be put into the timer.
 ```C
 typedef struct node		// the type of list
 {
-	char item[10];
+	int item;
 	int type;
-	int arrival_time;
+	int arrival;
 	struct node *next;
 }dType;
 
 typedef struct Q
 {
 	int count;
-	struct node * left , * right;
+	struct node * front , * rear;
 }qType;
+
+typedef struct T	//record the data and process time of deleted data
+{
+	struct node *temp;
+	int process_time;
+} tType;
 
 ```
 
